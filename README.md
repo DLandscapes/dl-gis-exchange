@@ -1,6 +1,6 @@
 # DL GIS Exchange
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23575334.svg)](https://doi.org/10.5281/zenodo.23575334)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.23575333.svg)](https://doi.org/10.5281/zenodo.23575333)
 
 A Blender extension by [Digital Landscapes](https://digital-landscapes.com) that moves terrain and map data between GIS
 and Blender in both directions — no GDAL, no QGIS plug-in, nothing else to install.
@@ -51,6 +51,9 @@ If you use DL GIS Exchange in teaching or research, please cite it — see [`CIT
 
 > Ihle, M. (2026). *DL GIS Exchange* (Version 1.0.0) [Computer software]. Digital Landscapes.
 > https://doi.org/10.5281/zenodo.23575334
+
+To cite the tool in general rather than this version, use the DOI for all versions,
+[10.5281/zenodo.23575333](https://doi.org/10.5281/zenodo.23575333) - it always resolves to the newest release.
 
 ## Licence
 
