@@ -11,9 +11,11 @@ authors:
     family-names: Ihle
     affiliation: "Digital Landscapes"
 version: "1.0.0"
+doi: 10.5281/zenodo.23575334
 date-released: "2026-10-22"
 license: GPL-3.0-or-later
 url: "https://digital-landscapes.com"
+repository-code: "https://github.com/DLandscapes/dl-gis-exchange"
 keywords:
   - Blender
   - GIS
