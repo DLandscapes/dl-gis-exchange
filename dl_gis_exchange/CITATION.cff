@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use DL GIS Exchange in your work, please cite it as below."
+type: software
+title: "DL GIS Exchange"
+abstract: >-
+  A Blender extension that moves terrain and map data between GIS and Blender in both directions: GeoTIFF terrain
+  rasters and GIS vectors (shapefile, GeoPackage, GeoJSON) into Blender as meshes, and Blender geometry back out as
+  georeferenced GeoTIFF rasters, including cut-and-fill difference rasters and solids. No GDAL needed.
+authors:
+  - given-names: Marc
+    family-names: Ihle
+    affiliation: "Digital Landscapes"
+version: "1.0.0"
+date-released: "2026-10-22"
+license: GPL-3.0-or-later
+url: "https://digital-landscapes.com"
+keywords:
+  - Blender
+  - GIS
+  - GeoTIFF
+  - terrain
+  - landscape architecture
+  - digital elevation model

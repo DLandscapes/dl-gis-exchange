@@ -1,0 +1,27 @@
+schema_version = "1.0.0"
+
+id = "dl_gis_exchange"
+version = "1.0.0"
+name = "DL GIS Exchange"
+tagline = "GeoTIFF terrain and GIS vectors into Blender, rasters back out"
+maintainer = "Digital Landscapes"
+type = "add-on"
+website = "https://digital-landscapes.com"
+tags = ["Import-Export", "Mesh"]
+blender_version_min = "4.5.0"
+
+# GPL-3.0-or-later since 0.6.0 (2026-10-19; Digital Landscapes' decision of 2026-10-09; extensions.blender.org requires
+# it for add-ons). Released zips up to 0.5.3 stay GPL-2.0-or-later. LICENSE.txt = the GPL-3.0 text; CREDITS.md names
+# everything taken from others. Bundled as unmodified PyPI wheels: tifffile (BSD-3-Clause) and pyshp (MIT), both
+# GPL-compatible; tiffcodecs.py carries an LZW decoder ported from older tifffile releases (BSD-3-Clause) - see its header.
+license = ["SPDX:GPL-3.0-or-later"]
+copyright = [
+  "2026 Marc Ihle (Digital Landscapes)",
+  "2008-2026 Christoph Gohlke (tifffile; LZW decoder port in tiffcodecs.py)",
+  "2013 Joel Lawhead (pyshp)",
+]
+
+wheels = ["./wheels/tifffile-2026.3.3-py3-none-any.whl", "./wheels/pyshp-3.1.6-py3-none-any.whl"]
+
+[permissions]
+files = "Read terrain rasters and GIS vectors; write GeoTIFF"
