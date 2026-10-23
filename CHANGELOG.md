@@ -8,8 +8,9 @@
   exact round trip.
 - **New in the Difference raster dialog:** *Crop to extent* and the *Extent* field, to compare only the area you care
   about (for example a deposit, not the whole valley).
-- The user manual's example is now the Padastertal in Tirol (Austria): BEV ALS terrain model 1 m in EPSG:3035, two
-  survey versions, with a real cut / fill and the results opened in QGIS.
+- A new user manual: one example throughout — Steinach am Brenner and the Padastertal deposit in Tirol (Austria), BEV
+  ALS terrain model 1 m in EPSG:3035 with OpenStreetMap — and "One slope, nine ways to change it": eight earthworks
+  designed on a real slope and one real change, each measured with Difference raster; the results opened in QGIS.
 
 ## 1.0.0 — 2026-10-22
 
