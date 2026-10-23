@@ -1,6 +1,9 @@
 # DL GIS Exchange - Digital Landscapes, 2026. Licence: GPL-3.0-or-later.
 # SPDX-FileCopyrightText: 2026 Marc Ihle (Digital Landscapes)
 # SPDX-License-Identifier: GPL-3.0-or-later
+# 1.0.1 (2026-10-23): Crop to extent with a DRAWN extent object (a plane over the area) now wins over the active
+#                     imported terrain in Export GeoTIFF, Grid from selection and Difference raster (1.0.0 used the
+#                     terrain's whole grid without a word); the Difference dialog shows Crop to extent and the Extent.
 # 1.0.0 (2026-10-22): first public release. Terrain rasters (GeoTIFF, ESRI ASCII grid, XYZ) in as quad meshes at
 #                     their map position (one scene origin in double precision); GIS vectors (shapefile, GeoPackage,
 #                     GeoJSON) in as points, edges and faces, flat, draped or from a field; a grid from any selection
@@ -479,7 +482,11 @@ def grid_definition(context, cell, align, margin, use_active_grid, objects, crop
     stale = [o.name for o in objects if has_grid_facts(o) and not grid_facts_hold(o, context)]
     tail = f" ({', '.join(stale)}: stored grid no longer matches the geometry - moved? - bounding box used)" if stale else ""
     act = context.active_object
-    if use_active_grid and has_grid_facts(act) and act in objects and act.name not in stale:
+    # 1.0.1: a DRAWN Extent object (named, not an imported raster) wins over the active grid - 1.0.0 silently used the
+    # active terrain's whole grid although "Crop to extent" with a plane was chosen on the dialog's first level
+    drawn = bpy.data.objects.get(terrain_name) if (crop_to_terrain and terrain_name) else None
+    drawn = drawn if (drawn is not None and drawn != act and not is_raster_grid(drawn)) else None
+    if use_active_grid and drawn is None and has_grid_facts(act) and act in objects and act.name not in stale:
         return (float(act["dl_gis_ul_E"]), float(act["dl_gis_ul_N"]), int(act["dl_gis_rows"]), int(act["dl_gis_cols"]),
                 float(act["dl_gis_cell_x"]), float(act["dl_gis_cell_y"]), f"grid of {act.name}" + tail)
     if crop_to_terrain:
@@ -750,6 +757,9 @@ class DLGIS_OT_difference_raster(bpy.types.Operator, ExportHelper):
         lay.prop_search(self, "existing_surface", bpy.data, "objects")
         lay.prop_search(self, "new_surface", bpy.data, "objects")
         lay.prop(self, "cell")
+        lay.prop(self, "crop_to_terrain")                       # 1.0.1: compare only inside a drawn extent
+        if self.crop_to_terrain:
+            lay.prop_search(self, "terrain", bpy.data, "objects")
         lay.prop(self, "make_mesh")
         if self.make_mesh:
             lay.prop(self, "mesh_height")

@@ -1,7 +1,7 @@
 schema_version = "1.0.0"
 
 id = "dl_gis_exchange"
-version = "1.0.0"
+version = "1.0.1"
 name = "DL GIS Exchange"
 tagline = "GeoTIFF terrain and GIS vectors into Blender, rasters back out"
 maintainer = "Digital Landscapes"

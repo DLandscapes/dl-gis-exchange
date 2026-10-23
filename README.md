@@ -24,7 +24,7 @@ Needs **Blender 4.5 LTS or newer** (4.5 is the last Blender for Intel Macs; 5.2 
 compiled: it is tested on Windows in Blender 4.5 and 5.2; macOS and Linux have not been tested yet - the self-test
 below tells within seconds whether it works on your computer, and we are glad to receive its report.
 
-1. Download `DL GIS Exchange 1.0.0.zip` from the [latest release](../../releases/latest). Keep it as a `.zip` — do not
+1. Download `DL GIS Exchange 1.0.1.zip` from the [latest release](../../releases/latest). Keep it as a `.zip` — do not
    unpack it.
 2. In Blender: **Edit › Preferences › Get Extensions**, the drop-down arrow at the top right › **Install from Disk…**,
    and choose the zip. (Or drag the zip into the Blender window.)
@@ -49,8 +49,8 @@ The user manual (PDF) is attached to each release.
 If you use DL GIS Exchange in teaching or research, please cite it — see [`CITATION.cff`](CITATION.cff) (GitHub's
 "Cite this repository" button gives APA and BibTeX):
 
-> Ihle, M. (2026). *DL GIS Exchange* (Version 1.0.0) [Computer software]. Digital Landscapes.
-> https://doi.org/10.5281/zenodo.23575334
+> Ihle, M. (2026). *DL GIS Exchange* (Version 1.0.1) [Computer software]. Digital Landscapes.
+> https://doi.org/10.5281/zenodo.23575333
 
 To cite the tool in general rather than this version, use the DOI for all versions,
 [10.5281/zenodo.23575333](https://doi.org/10.5281/zenodo.23575333) - it always resolves to the newest release.

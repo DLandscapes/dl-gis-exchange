@@ -1,5 +1,16 @@
 # Changelog
 
+## 1.0.1 — 2026-10-23
+
+- **Fixed:** *Crop to extent* with a drawn extent object (for example a plane drawn over the site) was ignored when an
+  imported terrain was the active object — Export GeoTIFF, Grid from selection and Difference raster then used the
+  terrain's whole grid without a word. A drawn extent now wins; an imported terrain as the active grid still gives an
+  exact round trip.
+- **New in the Difference raster dialog:** *Crop to extent* and the *Extent* field, to compare only the area you care
+  about (for example a deposit, not the whole valley).
+- The user manual's example is now the Padastertal in Tirol (Austria): BEV ALS terrain model 1 m in EPSG:3035, two
+  survey versions, with a real cut / fill and the results opened in QGIS.
+
 ## 1.0.0 — 2026-10-22
 
 First public release.
