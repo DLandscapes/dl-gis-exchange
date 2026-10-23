@@ -24,8 +24,8 @@ Needs **Blender 4.5 LTS or newer** (4.5 is the last Blender for Intel Macs; 5.2 
 compiled: it is tested on Windows in Blender 4.5 and 5.2; macOS and Linux have not been tested yet - the self-test
 below tells within seconds whether it works on your computer, and we are glad to receive its report.
 
-1. Download `DL GIS Exchange 1.0.1.zip` from the [latest release](../../releases/latest). Keep it as a `.zip` — do not
-   unpack it.
+1. Download the extension zip (`DL GIS Exchange <version>.zip`) from the [latest release](../../releases/latest). Keep
+   it as a `.zip` — do not unpack it.
 2. In Blender: **Edit › Preferences › Get Extensions**, the drop-down arrow at the top right › **Install from Disk…**,
    and choose the zip. (Or drag the zip into the Blender window.)
 3. The tools are in the 3D view's sidebar (press **N**), tab **DL GIS**.
